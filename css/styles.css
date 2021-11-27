@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: hsl(0, 0%, 100%);
+}
+hr.space {
+    background-color: hsl(215, 32%, 27%);
+    border: 0 none;
+    height: 1px;
+}
+.card {
+    background-color: hsl(216, 50%, 16%);
+    width: 280px;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 100px;
+    box-shadow: 0px 0px 50px hsl(214, 54%, 5%);
+}
+.thumbnail {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.thumbnail::after {
+    content: url(../images/icon-view.svg);
+    background-color: hsla(178, 100%, 50%, 0.5);
+    position: absolute;
+    inset: 0;
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    opacity: 0;
+    transition: all 0.25s ease;
+  }
+
+.thumbnail:hover::after { opacity: 1; }
+
+  .thumbnail img {
+    width: 100%;
+    display: block;
+  }
+.descript {
+    color: hsl(215, 51%, 70%);
+    font-size: 15px;
+    font-weight: 300;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+.price {
+    color: hsl(178, 100%, 50%);
+    font-size: 15px;
+    font-weight: 400;
+}
+.price:before {
+    content: url(../images/icon-ethereum.svg);
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+.time {
+    color: hsl(215, 51%, 70%);
+    font-size: 15px;
+}
+.time:before {
+    content: url(../images/icon-clock.svg);
+    margin-right: 8px;
+}
+.avatar {
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.artist {
+    font-size: 15px;
+    color: hsl(215, 51%, 70%);
+    margin: 15px 0 0 15px;
+    position: absolute;
+}
+.hightlight {
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+.hightlight:hover {
+    color:hsl(178, 100%, 50%);
+}
